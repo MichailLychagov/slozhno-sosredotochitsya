@@ -4,9 +4,55 @@
   переключая тему
 */
 
-.page.theme_dark {
+:root.theme-dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --main-font: "IBM Plex mono";
+  /* текст заливки заголовков h3*/
+  --accent-color: #ff0070;
+  /* текст основного заголовка no focus*/
+  --heading-color: #db00ff;
+  /* не знаю где использовать*/
+  --decor-visibility: #ff0070;
+  --content-title-color: #ff0070;
+  /* текст основного контента блоков*/
+  --text-color: #f1b2ce;
+  /* текст в кнопках переключения*/
+  --text-button: #ff0070;
+  /* текст фона*/
+  --bg-color: #000028;
+  --link-color: #ff0070;
+  --rec-color: #ff0070;
+  --head-color: #000028;
+  background-image: url(../images/cover-image-dark.png);
+  --bg-image: url(../images/cover-image-dark.png);
+}
+
+.page.theme_dark {
+  /* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+     --main-font: "IBM Plex mono";
+  /* текст заливки заголовков h3*/
+  --main-font: "IBM Plex mono";
+  /* текст заливки заголовков h3*/
+  --accent-color: #ff0070;
+  /* текст основного заголовка no focus*/
+  --heading-color: #db00ff;
+  /* не знаю где использовать*/
+  --decor-visibility: #ff0070;
+  --content-title-color: #ff0070;
+  /* текст основного контента блоков*/
+  --text-color: #f1b2ce;
+  /* текст в кнопках переключения*/
+  --text-button: #ff0070;
+  /* текст фона*/
+  --bg-color: #000028;
+  --link-color: #ff0070;
+  --rec-color: #ff0070;
+  --head-color: #000028;
+  background-image: url(../images/cover-image-dark.png);
+  --bg-image: url(../images/cover-image-dark.png);
 }
