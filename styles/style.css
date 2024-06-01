@@ -180,6 +180,9 @@
   font-weight: 400;
   line-height: 23.4px;
   font-size: 18px;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 /* фон и стили для параграфов*/
@@ -255,12 +258,6 @@
 .advice .content-section_title {
   margin: 0;
   margin-top: 50px;
-}
-
-.text-block_subheading {
-  margin: 0;
-  margin-top: 20px;
-  margin-bottom: 10px;
 }
 
 /* стилизация галереи*/
