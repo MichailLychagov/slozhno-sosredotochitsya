@@ -8,85 +8,94 @@
   min-width: 375px;
   margin: 0;
   font-family: var(--main-font, sans-serif);
-  background-color: var(--bg-color, #000028);
-  font-size: 18px;
-  font-weight: 400;
-  padding: 10px;
+  background-color: var(--bg-color);
+  font-size: var(--mainFS);
+  font-weight: var(--mainFW);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   box-sizing: border-box;
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--bg-image);
 }
 
 /* стилизация заголовков и контента в Header*/
 
 .header {
   display: grid;
-  grid-template-rows: repeat (3, 1fr);
+  grid-template-rows: 1fr min-content 1fr;
+  justify-items: end;
+  align-items: center;
+  block-size: 100vh;
   min-block-size: 668px;
+  padding: var(--paddingP);
 }
 
 .header-title {
-  color: var(--heading-color, #db00ff);
+  color: var(--heading-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
   line-height: 0.8em;
   margin: 0;
+  padding-bottom: 13px;
 }
 
 .header-content {
   display: block;
-  height: 117px;
+  min-block-size: 117px;
   min-inline-size: 335px;
-  font-family: var(--main-font, sans-serif);
-  font-weight: 700;
+  font-family: var(--main-font);
+  font-weight: var(--headFW);
   line-height: 23.4px;
-  font-size: 18px;
+  font-size: var(--mainFS);
   text-align: left;
   justify-self: end;
-  margin-top: 0em;
+  margin-bottom: 2.6em;
 }
 
 /* стилизация кнопок переключения темы*/
 
 .header__theme-menu {
-  justify-self: end;
-  padding-top: 2.6em;
+  padding-bottom: var(--paddingP);
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   list-style-type: none;
 }
 
 .header__theme-menu-button {
   border: 1px solid transparent;
-  font-weight: 400;
-  height: 23px;
-  font-size: 18px;
+  font-family: var(--main-font);
+  font-weight: var(--mainFW);
+  height: 26px;
+  font-size: var(--mainFS);
   text-align: center;
   text-transform: lowercase;
   background-color: transparent;
   padding: 0px 13px 0px 13px;
   color: var(--link-color);
+  outline-style: none;
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
   border: 1px solid var(--link-color);
+  cursor: pointer;
 }
 
-.header__theme-menu-item:hover {
+.header__theme-menu-button:hover {
   border: 1px solid var(--link-color);
+  cursor: pointer;
 }
 
 .header__theme-menu-button:focus {
+  border: 1px solid transparent;
   border-block-end: solid;
-  background-color: transparent;
+  outline-style: none;
+  cursor: pointer;
 }
 /* стилизация уголков на header*/
 
@@ -98,10 +107,8 @@
   block-size: 25px;
   border-left: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
-  align-self: end;
-  inset-inline-end: 1;
-  inset-block-start: 1;
-  margin-bottom: 20px;
+  bottom: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  left: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
 }
 
 .decorated-zone::before {
@@ -112,29 +119,22 @@
   width: 25px;
   border-right: 1px solid var(--accent-color);
   border-top: 1px solid var(--accent-color);
-  inset-inline-end: 0;
-  inset-block-start: 0;
-  margin-top: clamp(0.625rem, 0.2639rem + 1.5408vw, 1.25rem);
-  margin-right: clamp(0.625rem, 0.2639rem + 1.5408vw, 1.25rem);
+  top: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  right: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
 }
 
 /* стилизация rec и точки записи*/
 
 .decorated-element {
   position: absolute;
-  justify-self: end;
   align-items: center;
-  gap: 10px;
-  margin-right: 29px;
-  margin-top: 20px;
-  width: 52px;
-  height: 26px;
+  gap: var(--paddingP);
+  top: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  right: clamp(1.25rem, 0.6536rem + 2.5445vw, 1.875rem);
   color: var(--decor-visibility);
   white-space: nowrap;
   text-transform: uppercase;
   display: flex;
-  margin: 0;
-  padding-right: clamp(0.625rem, 0.625rem + 0vw, 0.625rem);
 }
 
 .decorated-element::after {
@@ -159,105 +159,90 @@
 .content-section_title {
   color: var(--content-title-color);
   font-family: var(--main-font, sans-serif);
-  font-weight: 700;
+  font-weight: var(--headFW);
   line-height: 23.4px;
-  font-size: 18px;
+  font-size: var(--mainFS);
 }
 
 /* фон и стили для h3*/
 .text-block_heading {
   color: var(--head-color);
   font-family: var(--main-font, sans-serif);
-  font-weight: 700;
+  font-weight: var(--headFW);
   line-height: 23.4px;
-  font-size: 18px;
+  font-size: var(--mainFS);
 }
 
 /* фон и стили для h4*/
 .text-block_subheading {
   color: var(--head-color);
   font-family: var(--main-font, sans-serif);
-  font-weight: 400;
+  font-weight: var(--mainFW);
   line-height: 23.4px;
-  font-size: 18px;
+  font-size: var(--mainFS);
   margin: 0;
-  margin-top: 20px;
-  margin-bottom: 10px;
 }
 
 /* фон и стили для параграфов*/
 .paragraph {
   color: var(--text-color);
   font-family: var(--main-font, sans-serif);
-  font-weight: 400;
+  font-weight: var(--mainFW);
   line-height: 23.4px;
-  font-size: 18px;
+  font-size: var(--mainFS);
   margin: 0;
+  padding-top: var(--paddingP);
 }
 
 /* стилизация основного контента*/
+
 .question {
   display: grid;
   grid-template-columns: repeat(object-fill, 1fr);
-  gap: 5px;
+  gap: var(--main-gap);
 }
 
 .question .content-section_title {
   margin: 0;
-  margin-top: 30px;
+  margin-top: var(--paddingP);
 }
 
-.question .content .text-block {
-  display: grid;
-  grid-template-columns: repeat(object-fill, 1fr);
+.content.content-section {
+  padding: var(--paddingP);
 }
 
 .question .text-block_heading {
   margin: 0;
-  margin-top: 20px;
-  margin-bottom: 2px;
 }
 
 .answer {
   display: grid;
   grid-template-columns: repeat(object-fill, 1fr);
-}
-
-.answerm.content.text-block {
-  display: grid;
-  grid-template-columns: repeat(object-fill, 1fr);
+  gap: var(--main-gap);
 }
 
 .answer .text-block_heading {
   margin: 0;
-  margin-top: 20px;
-  margin-bottom: 10px;
 }
 
 .answer .content-section_title {
   margin: 0;
-  margin-top: 50px;
+  margin-top: var(--main-spase);
 }
 
 .advice {
   display: grid;
   grid-template-columns: repeat(object-fill, 1fr);
-}
-
-.advice .content .text-block {
-  display: grid;
-  grid-template-columns: repeat(object-fill, 1fr);
+  gap: var(--main-gap);
 }
 
 .advice .text-block_heading {
   margin: 0;
-  margin-top: 20px;
-  margin-bottom: 10px;
 }
 
 .advice .content-section_title {
   margin: 0;
-  margin-top: 50px;
+  margin-top: var(--main-spase);
 }
 
 /* стилизация галереи*/
@@ -265,12 +250,14 @@
   position: relative;
   display: grid;
   grid-template-rows: repeat(auto-fill, fit-content(355px));
-  gap: 10px;
+  gap: var(--paddingP);
+  margin: 0;
+  padding: var(--paddingP);
 }
 
 .grid .text-block_heading {
   margin: 0;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .content__images-item {
@@ -280,29 +267,29 @@
 }
 
 /*Футер*/
-
 .footer {
   display: grid;
   grid-template-rows: repeat(1, 1fr);
-  position: relative;
   align-items: center;
-  margin-top: 40px;
-  padding-bottom: 9px;
-  margin-right: -9px;
-  min-block-size: 668px;
-  color: var(--heading-color, #db00ff);
+  margin: 0;
+  margin-top: 30px;
+  color: var(--heading-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 95.7px;
-  font-weight: 700;
+  font-weight: var(--headFW);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  position: relative;
+  padding: 0px 10px 0px;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .link {
   font-family: var(--main-font, sans-serif);
   color: var(--text-color);
-  text-shadow: 1px 1px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
   font-size: inherit;
   font-weight: inherit;
-  line-height: 32.5px;
   text-decoration: none;
 }
 
@@ -316,93 +303,65 @@
 
 /*Адаптив для планшетов*/
 
-@media (min-width: 768px) and (max-width: 1023.99px) {
+@media (width >= 768px) {
   .page {
-    min-width: 768px;
-    padding: 20px;
   }
 
   .header {
-    min-block-size: 1024px;
-    margin-left: -20px;
-  }
-  .title {
-    font-size: 120px;
-  }
-
-  .header::after {
-    margin-bottom: 2.1em;
-    margin-left: 1em;
+    padding: 0;
   }
 
   .header__theme-menu {
-    padding-top: 8.5em;
+    padding: 0;
+    margin: 30px 20px 0 0;
   }
 
   .header-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    justify-self: start;
+    padding-top: 15px;
   }
 
   .header-content {
-    margin-bottom: 40px;
-    height: 117px;
-    width: 364px;
+    max-inline-size: 364px;
+    margin-right: 20px;
+  }
+
+  .content.content-section {
+    padding: 20px;
   }
 
   .question {
-    display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 236px 1fr;
+    grid-template-rows: repeat(2, auto);
     margin-top: 40px;
   }
 
   .question .content-section_title {
     margin: 0;
-    margin-top: 0;
-    margin-right: 25px;
+    grid-column: 1;
+    grid-row: 1 / span 2;
   }
 
   .question .text-block_heading {
     margin-top: 0px;
   }
 
-  .paragraph {
-    padding-bottom: 20px;
-  }
-
-  .answer {
-    margin-top: 20px;
-  }
-
   .answer .content-section_title {
-    margin-top: 49px;
     padding-right: 30em;
-    margin-bottom: 18px;
-  }
-
-  .answer .text-block_heading {
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin-top: 80px;
   }
 
   .advice {
-    display: grid;
-    grid-template-columns: 258px 1fr;
-    margin-top: 38px;
+    grid-template-columns: 236px 1fr;
+    grid-template-rows: repeat(6, auto);
+    margin-top: 80px;
   }
 
   .advice .content-section_title {
     margin: 0;
-    margin-top: 20px;
-  }
-
-  .advice .text-block_heading {
-    margin: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .text-block_subheading {
-    margin-top: 0;
+    grid-column: 1 / 1;
+    grid-row: 1 / span 6;
   }
 
   .grid {
@@ -410,14 +369,13 @@
     grid-template-columns: repeat(auto-fill, auto);
     grid-template-rows: repeat(auto-fill, auto);
     gap: 20px;
-    width: 728px;
-    height: 823px;
+    padding: 20px;
   }
 
   .grid .text-block_heading {
     grid-row: 1 / 1;
     grid-column: 1 / span 3;
-    margin-top: 66px;
+    margin-top: 40px;
   }
 
   .content__images-item-first {
@@ -462,33 +420,25 @@
   .footer {
     font-size: clamp(7.25rem, -0.4375rem + 16.0156vw, 9.8125rem);
     line-height: 99px;
-    min-block-size: 1006px;
-    margin-top: 130px;
     justify-content: center;
+    margin-top: 80px;
   }
 }
 
 /*Адаптив для десктоп*/
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   .page {
-    min-width: 1024px;
-    padding: 20px;
   }
 
   .header {
     align-items: start;
-    min-block-size: 768px;
-    gap: 5.5%;
-    margin-left: -20px;
   }
 
   .header__theme-menu {
     align-self: start;
-    padding-top: 0;
     justify-self: center;
-    padding-right: 2em;
-    margin-left: 18px;
+    margin: 18px 38px 0px 0;
   }
 
   .header__theme-menu-list {
@@ -498,79 +448,37 @@
 
   .header-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    padding-top: 0;
     align-self: center;
-    gap: 5.5%;
   }
 
   .header-content {
-    margin-bottom: 0;
-    margin-top: 0;
-    height: 71px;
-    width: 491px;
+    min-block-size: 71px;
+    min-inline-size: 491px;
+    align-self: center;
   }
 
   .question {
-    display: grid;
-    grid-template-columns: 328px 1fr;
-    margin-top: 38px;
+    grid-template-columns: 314px 1fr;
   }
 
-  .question .content-section_title {
-    margin: 0;
-    margin-top: 0;
-    margin-right: 25px;
-  }
-
-  .question .text-block_heading {
-    margin-top: 4px;
-  }
-
-  .paragraph {
-    padding-bottom: 18px;
+  .answer {
+    grid-template-columns: repeat(3, minmax(315px, 1fr));
+    grid-auto-flow: row;
+    grid-template-rows: repeat(2, auto);
   }
 
   .answer .content-section_title {
-    margin-top: 43px;
     padding-right: 40em;
-    margin-bottom: 19px;
-  }
-
-  .answer .text-block_heading {
-    margin-top: 0;
-    margin-bottom: 0;
+    grid-column: 1 / span 3;
+    grid-row: 1 / 1;
   }
 
   .advice {
-    display: grid;
-    grid-template-columns: 335px 1fr;
-    margin-top: 44px;
+    grid-template-columns: 315px 1fr;
   }
 
-  .advice .content-section_title {
-    margin: 0;
-    margin-top: 20px;
-  }
-
-  .advice .text-block_heading {
-    margin: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .text-block_subheading {
-    margin-top: 0;
-  }
-
-  .answer_article-block {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(315px, 1fr));
-    grid-auto-flow: column;
-    grid-template-rows: repeat(2, auto);
-    gap: 15px;
-  }
   .footer {
-    margin-top: 2.6em;
-    min-block-size: 746px;
+    justify-content: center;
+    margin-top: 40px;
   }
 }

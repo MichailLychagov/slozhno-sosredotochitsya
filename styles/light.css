@@ -4,13 +4,21 @@
   переключая тему
 */
 
-.page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
+/* .page.theme_light {
+  сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
-  */
+}*/
+
+.page.theme_light {
   --main-font: "IBM Plex mono";
   /* текст заливки заголовков h3*/
+  --mainFS: 18px;
+  --mainFW: 400;
+  --headFW: 700;
+  --paddingP: 10px;
+  --main-gap: 20px;
+  --main-spase: 50px;
   --accent-color: #ff8dcb;
   /* текст основного заголовка no focus*/
   --heading-color: #ffc2e6;
@@ -26,40 +34,36 @@
   --link-color: #353430;
   --rec-color: #fff1f7;
   --head-color: #353430;
+  --bg-image: url(../images/cover-image-light.png);
   background-image: url(../images/cover-image-light.png);
-  --bg-image: url(../image/cover-image-light.png);
-}
-
-:root.page.theme_light {
-  --main-font: "IBM Plex mono";
-  --heading-color: #ffc2e6;
-  --text-color: #353430;
-  --accent-color: #ff8dcb;
-  --text-button: #353430;
-  --decor-visibility: #fff1f7;
-  --head-color: #353430;
-  --content-title-color: #353430;
-  --bg-color: #fff1f7;
-  --link-color: #353430;
-  --rec-color: #fff1f7;
-  background-image: url(../image/cover-image-light.png);
-  --bg-image: url(../image/cover-image-light.png);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --main-font: "IBM Plex mono";
-    --heading-color: #ffc2e6;
-    --text-color: #353430;
+    /* текст заливки заголовков h3*/
+    --mainFS: 18px;
+    --mainFW: 400;
+    --headFW: 700;
+    --paddingP: 10px;
+    --main-gap: 20px;
+    --main-spase: 50px;
     --accent-color: #ff8dcb;
-    --text-button: #353430;
+    /* текст основного заголовка no focus*/
+    --heading-color: #ffc2e6;
+    /* не знаю где использовать*/
     --decor-visibility: #fff1f7;
-    --head-color: #353430;
     --content-title-color: #353430;
+    /* текст основного контента блоков*/
+    --text-color: #353430;
+    /* текст в кнопках переключения*/
+    --text-button: #353430;
+    /* текст фона*/
     --bg-color: #fff1f7;
     --link-color: #353430;
     --rec-color: #fff1f7;
+    --head-color: #353430;
+    --bg-image: url(../images/cover-image-light.png);
     background-image: url(../images/cover-image-light.png);
-    --bg-image: url(../image/cover-image-light.png);
   }
 }

@@ -9,6 +9,12 @@
   */
   --main-font: "IBM Plex mono";
   /* текст заливки заголовков h3*/
+  --mainFS: 18px;
+  --mainFW: 400;
+  --headFW: 700;
+  --paddingP: 10px;
+  --main-gap: 20px;
+  --main-spase: 50px;
   --accent-color: #ff0070;
   /* текст основного заголовка no focus*/
   --heading-color: #db00ff;
