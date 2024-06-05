@@ -304,9 +304,6 @@
 /*Адаптив для планшетов*/
 
 @media (width >= 768px) {
-  .page {
-  }
-
   .header {
     padding: 0;
   }
@@ -428,9 +425,6 @@
 /*Адаптив для десктоп*/
 
 @media (width >= 1024px) {
-  .page {
-  }
-
   .header {
     align-items: start;
   }
