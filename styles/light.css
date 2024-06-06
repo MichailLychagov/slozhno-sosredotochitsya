@@ -13,6 +13,7 @@
 .page.theme_light {
   --main-font: "IBM Plex mono";
   /* текст заливки заголовков h3*/
+  --alternativ-font: monospace;
   --mainFS: 18px;
   --mainFW: 400;
   --headFW: 700;
@@ -32,8 +33,10 @@
   /* текст фона*/
   --bg-color: #fff1f7;
   --link-color: #353430;
+  --link-text-color: #353430;
   --rec-color: #fff1f7;
   --head-color: #353430;
+  --hover-color: rgba(50, 49, 45, 0.4);
   --bg-image: url(../images/cover-image-light.png);
   background-image: url(../images/cover-image-light.png);
 }
@@ -42,6 +45,7 @@
   :root {
     --main-font: "IBM Plex mono";
     /* текст заливки заголовков h3*/
+    --alternativ-font: monospace;
     --mainFS: 18px;
     --mainFW: 400;
     --headFW: 700;
@@ -61,8 +65,10 @@
     /* текст фона*/
     --bg-color: #fff1f7;
     --link-color: #353430;
+    --link-text-color: #353430;
     --rec-color: #fff1f7;
     --head-color: #353430;
+    --hover-color: rgba(50, 49, 45, 0.4);
     --bg-image: url(../images/cover-image-light.png);
     background-image: url(../images/cover-image-light.png);
   }

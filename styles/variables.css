@@ -9,6 +9,7 @@
   */
   --main-font: "IBM Plex mono";
   /* текст заливки заголовков h3*/
+  --alternativ-font: monospace;
   --mainFS: 18px;
   --mainFW: 400;
   --headFW: 700;
@@ -28,8 +29,10 @@
   /* текст фона*/
   --bg-color: #000028;
   --link-color: #ff0070;
+  --link-text-color: #f1b2ce;
   --rec-color: #ff0070;
   --head-color: #000028;
+  --hover-color: rgba(255, 0, 112, 0.4);
   --bg-image: url(../images/cover-image-dark.png);
   background-image: url(../images/cover-image-dark.png);
 }
